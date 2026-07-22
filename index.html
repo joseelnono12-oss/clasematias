@@ -1,0 +1,188 @@
+DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Índice del Proyecto de Programación</title>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #212529;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border-color: #e5e7eb;
+            --tag-bg: #e0e7ff;
+            --tag-color: #3730a3;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --text-color: #f8fafc;
+                --accent-color: #38bdf8;
+                --accent-hover: #0284c7;
+                --border-color: #334155;
+                --tag-bg: #1e1b4b;
+                --tag-color: #a5b4fc;
+            }
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            opacity: 0.8;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .module {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .module-title {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            color: var(--accent-color);
+        }
+
+        .index-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .index-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .index-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .item-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        .tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📌 Índice del Proyecto</h1>
+            <p class="subtitle">Documentación y accesos directos a los módulos del sistema</p>
+        </header>
+
+        <main>
+            <!-- Módulo 1 -->
+            <section class="module">
+                <h2 class="module-title">1. Documentación & Planificación</h2>
+                <ul class="index-list">
+                    <li class="index-item">
+                        <a href="docs/requisitos.html" class="item-link">Requisitos del Sistema</a>
+                        <span class="tag">HTML</span>
+                    </li>
+                    <li class="index-item">
+                        <a href="docs/diagrama.pdf" class="item-link">Diagrama Entidad-Relación</a>
+                        <span class="tag">PDF</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Módulo 2 -->
+            <section class="module">
+                <h2 class="module-title">2. Interfaces de Usuario (Frontend)</h2>
+                <ul class="index-list">
+                    <li class="index-item">
+                        <a href="frontend/login.html" class="item-link">Pantalla de Inicio de Sesión</a>
+                        <span class="tag">HTML / CSS</span>
+                    </li>
+                    <li class="index-item">
+                        <a href="frontend/dashboard.html" class="item-link">Panel Principal (Dashboard)</a>
+                        <span class="tag">HTML / JS</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Módulo 3 -->
+            <section class="module">
+                <h2 class="module-title">3. Pruebas & APIs (Backend)</h2>
+                <ul class="index-list">
+                    <li class="index-item">
+                        <a href="api/endpoints.json" class="item-link">Estructura de Endpoints JSON</a>
+                        <span class="tag">JSON</span>
+                    </li>
+                    <li class="index-item">
+                        <a href="tests/reporte.html" class="item-link">Reporte de Pruebas Unitarias</a>
+                        <span class="tag">Reporte</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>Proyecto de Programación &copy; 2026</p>
+        </footer>
+    </div>
+
+</body>
+</html>
